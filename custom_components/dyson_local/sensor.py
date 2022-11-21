@@ -245,7 +245,7 @@ class DysonTemperatureSensor(DysonSensorEnvironmental):
         if isinstance(temperature_kelvin, str):
             return temperature_kelvin
 
-        return temperature_kelvin - 273.15
+        return round(temperature_kelvin - 273.15, 2)
 
 
 class DysonPM25Sensor(DysonSensorEnvironmental):
